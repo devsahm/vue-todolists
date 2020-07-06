@@ -14,7 +14,7 @@ export default {
     name:"AddTodo",
     data(){
         return {
-            title: ""
+            title: ''
         }
     },
     methods: {
@@ -23,10 +23,10 @@ export default {
            const newTodo = {
                id:uuid.v4(),
                title:this.title,
-               completed:false
+               completed: false
            }
-           //send up to parent 
-           this.emit('add-todo', newTodo);
+           //send up to parent  
+           this.$emit('add-todo', newTodo);
         }
     }
 }
